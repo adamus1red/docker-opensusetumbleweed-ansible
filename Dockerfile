@@ -9,8 +9,10 @@ ENV pip_packages "ansible cryptography"
 RUN zypper refresh \
     && zypper dup -y \
     && zypper install -y \
-       sudo build-essential wget libffi-dev libssl-dev \
-       python-pip python-dev python-setuptools python-wheel \
+       sudo devel_python3 wget libffi-devel libssl-devel \
+       python2-pip python3-pip python2-devel python3-devel \
+       python2-setuptools python3-setuptools python2-wheel \
+       python3-wheel \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && zypper clean \
