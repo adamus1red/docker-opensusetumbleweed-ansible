@@ -1,4 +1,4 @@
-# Debian 10 (Buster) Ansible Test Image
+# OpenSuse (Tumbleweed) Ansible Test Image
 
 ![Docker Image CI](https://github.com/adamus1red/docker-opensusetumbleweed-ansible/workflows/Docker%20Image%20CI/badge.svg?branch=master) [![Build Status](https://travis-ci.com/adamus1red/docker-opensusetumbleweed-ansible.svg?branch=master)](https://travis-ci.com/adamus1red/docker-opensusetumbleweed-ansible) [![Docker Automated build](https://img.shields.io/docker/automated/geerlingguy/docker-debian10-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/geerlingguy/docker-debian10-ansible/)
 
