@@ -7,7 +7,7 @@ ENV pip_packages "ansible cryptography"
 
 # Install dependencies.
 RUN zypper refresh \
-    && zypper dup -y 
+    && zypper dup -y \
     && zypper install -y --no-install-recommends \
        sudo build-essential wget libffi-dev libssl-dev \
        python-pip python-dev python-setuptools python-wheel \
