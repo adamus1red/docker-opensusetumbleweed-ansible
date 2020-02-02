@@ -8,8 +8,9 @@ ENV pip_packages "ansible cryptography"
 # Install dependencies.
 RUN zypper refresh \
     && zypper dup -y \
+    && zypper in -t pattern devel_python3 \
     && zypper install -y \
-       sudo devel_python3 wget libffi-devel libssl-devel \
+       sudo wget libffi-devel libssl-devel \
        python2-pip python3-pip python2-devel python3-devel \
        python2-setuptools python3-setuptools python2-wheel \
        python3-wheel \
