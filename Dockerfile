@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM opensuse/tumbleweed:latest
 LABEL maintainer="Jeff Geerling"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -6,14 +6,14 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV pip_packages "ansible cryptography"
 
 # Install dependencies.
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-       sudo systemd \
-       build-essential wget libffi-dev libssl-dev \
+RUN zypper refresh \
+    && zypper dup -y 
+    && zypper install -y --no-install-recommends \
+       sudo build-essential wget libffi-dev libssl-dev \
        python-pip python-dev python-setuptools python-wheel \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
-    && apt-get clean \
+    && zypper clean \
     && wget https://bootstrap.pypa.io/get-pip.py \
     && python get-pip.py
 
